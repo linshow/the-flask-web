@@ -9,7 +9,7 @@ def get_latlng(address):
     longitude=[]
     new_latlng=[]
     global new_address
-    gmaps = googlemaps.Client(key='AIzaSyCKueW4v0pJNFNF5DMcNB52WPt-ScPpjjM')
+    gmaps = googlemaps.Client()
 
     geocode_result = gmaps.geocode(address)
     if geocode_result:
