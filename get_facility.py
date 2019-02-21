@@ -2,7 +2,7 @@ import requests
 import json
 import time
 
-api_key ='AIzaSyCKueW4v0pJNFNF5DMcNB52WPt-ScPpjjM'
+
 def get_nearby_places(coordinates, business_type, next_page,count):
     global ano_count
     total_results = []
