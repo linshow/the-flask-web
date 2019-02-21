@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <title>{% block title%}{% endblock%}</title>
+    
+    {% block head%}{%endblock%}
+</head>
+ 
+<body>
+    
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!--<a class="navbar-brand" href="{{url_for('index')}}"> <img src="" width="30" height="30" alt="">SHOW </a>--->
+         <span class="navbar-brand mb-0 h1">SHOW</span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="{{url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="{{url_for('address')}}">Address</a>
+            </div>
+        </div>
+    </nav>
+    {% block main %}
+
+    {% endblock %}
+
+
+</body>
+</html>

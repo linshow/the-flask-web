@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{%block head%} 
+   
+    <link href="static/css/signin.css" rel="stylesheet">
+
+    <script src="static/js/jquery-1.9.0.js"></script>
+    <script src="static/js/script.js"></script>
+    <style>
+      #map{
+        height:500px;
+        width:500px;
+        
+      }
+    </style>
+    <script>
+      var map;
+      function initMap() {
+         var position = {
+          lat: 25.0416929,
+          lng: 121.5328068
+        };
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: position,
+          zoom: 16
+        });
+        var marker = new google.maps.Marker({
+          position: position,
+          map: map
+        });
+      }
+      
+</script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCKueW4v0pJNFNF5DMcNB52WPt-ScPpjjM&callback=initMap"
+async defer></script>-->
+
+{%endblock%}
+
+{% block title%} 
+  address
+{% endblock%}
+
+{% block main %}
+ 
+      <div class="container">
+
+      <form class="form-signin"  role="form">
+        <h2 class="form-signin-heading">Key The Address</h2>
+        <input type="text" id="txtUsername" name="username" class="form-control" placeholder="Address" required autofocus>
+         <!--<input type="password" id="txtPassword" name="password" class="form-control" placeholder="Password" required>-->
+        
+        <button class="btn btn-lg btn-primary btn-block" type="reset">Submit</button>
+      </form>
+
+    <div id="successAlert" class="alert alert-success" role="alert" style="display:none;"></div>
+    <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+
+    <div id="map"></div>
+
+    </div> <!-- /container -->
+
+
+
+{% endblock%}
+
+    
+ 
+   
+
+  
+   
+   
+
+
+
+
+  
+
